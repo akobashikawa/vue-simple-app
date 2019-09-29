@@ -5,25 +5,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML5 + Vue</title>
+  <title>HTML5 + Vue + Router</title>
 </head>
 
 <body>
   <div id="app">
-    <h1>HTML5 + Vue</h1>
+    <h1>HTML5 + Vue + Router</h1>
 
-    {{ hello }}
+    <p>{{ hello }}</p>
+
+    <ul>
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/about">About</router-link>
+      </li>
+    </ul>
+
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
   <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        hello: 'Hello Vue!'
-      }
+    var Home = Vue.component('home', {
+      data() {
+        return {
+          hello: 'Hello Home!'
+        };
+      },
+      template: `<div>
+          <h2>Home</h2>
+          <p>{{ hello }}</p>
+        </div>`
     });
+
+    var About = Vue.component('about', {
+      data() {
+        return {
+          hello: 'Hello About!'
+        };
+      },
+      template: `<div>
+          <h2>About</h2>
+          <p>{{ hello }}</p>
+        </div>`
+    });
+
+    var router = new VueRouter({
+      // mode: 'history',
+      routes: [
+        {
+          path: '/',
+          name: 'home',
+          component: Home
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: About
+        }
+      ]
+    });
+
+    var app = new Vue({
+      router,
+      data() {
+        return {
+          hello: 'Hello Vue!'
+        };
+      }
+    }).$mount('#app');
   </script>
 </body>
 
