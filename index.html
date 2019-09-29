@@ -5,14 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML5 + Vue + Router</title>
+  <title>HTML5 + Vue + Router + Vuex</title>
 </head>
 
 <body>
   <div id="app">
-    <h1>HTML5 + Vue + Router</h1>
+    <h1>HTML5 + Vue + Router + Vuex</h1>
 
     <p>{{ hello }}</p>
+
+    <p>Counter: {{ counter }}</p>
 
     <ul>
       <li>
@@ -30,17 +32,19 @@
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/vuex"></script>
 
   <script>
     var Home = Vue.component('home', {
       data() {
         return {
-          hello: 'Hello Home!'
+          hello: 'Hello Home!',
         };
       },
       template: `<div>
           <h2>Home</h2>
           <p>{{ hello }}</p>
+          <counter></counter>
         </div>`
     });
 
@@ -53,7 +57,27 @@
       template: `<div>
           <h2>About</h2>
           <p>{{ hello }}</p>
+          <counter></counter>
         </div>`
+    });
+
+    var Counter = Vue.component('counter', {
+      computed: {
+        ...Vuex.mapState(['counter'])
+      },
+      methods: {
+        incCounter() {
+          this.$store.commit('incCounter', 1);
+        },
+        decCounter() {
+          this.$store.commit('decCounter', 1);
+        }
+      },
+      template: `<div>
+        Counter: {{ counter }}
+        <button @click="incCounter">+</button>
+        <button @click="decCounter">-</button>
+      </div>`
     });
 
     var router = new VueRouter({
@@ -72,12 +96,33 @@
       ]
     });
 
+    var store = new Vuex.Store({
+      state: {
+        counter: 0
+      },
+      mutations: {
+        incCounter(state, delta) {
+          state.counter += delta;
+        },
+        decCounter(state, delta) {
+          state.counter -= delta;
+        }
+      },
+      actions: {
+
+      }
+    });
+
     var app = new Vue({
       router,
+      store,
       data() {
         return {
           hello: 'Hello Vue!'
         };
+      },
+      computed: {
+        ...Vuex.mapState(['counter'])
       }
     }).$mount('#app');
   </script>
