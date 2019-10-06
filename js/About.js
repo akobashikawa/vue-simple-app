@@ -1,5 +1,8 @@
+import Counter from './Counter.js';
+
 const About = {
   name: 'about',
+  components: { Counter },
   data() {
     return {
       hello: 'Hello About!'
