@@ -1,5 +1,5 @@
-import Home from './Home.js';
-import About from './About.js';
+const Home = () => import('./Home.js');
+const About = () => import('./About.js');
 
 const router = new VueRouter({
   // mode: 'history',

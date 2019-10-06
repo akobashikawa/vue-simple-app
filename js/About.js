@@ -1,4 +1,4 @@
-import Counter from './Counter.js';
+const Counter = () => import('./Counter.js');
 
 const About = {
   name: 'about',
