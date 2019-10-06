@@ -3,9 +3,6 @@ import store from './store.js';
 
 import App from './App.js';
 
-// common
-import Counter from './Counter.js';
-
 var app = new Vue({
   router,
   store,

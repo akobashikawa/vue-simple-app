@@ -1,4 +1,5 @@
-const Counter = Vue.component('counter', {
+const Counter = {
+  name: 'counter',
   computed: {
     ...Vuex.mapState(['counter'])
   },
@@ -26,6 +27,6 @@ const Counter = Vue.component('counter', {
       </v-card-actions>
     </v-card>
   </div>`
-});
+};
 
 export default Counter;

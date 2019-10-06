@@ -1,4 +1,5 @@
-const About = Vue.component('about', {
+const About = {
+  name: 'about',
   data() {
     return {
       hello: 'Hello About!'
@@ -13,6 +14,6 @@ const About = Vue.component('about', {
         </v-card-text>
       </v-card>
     </div>`
-});
+};
 
 export default About;

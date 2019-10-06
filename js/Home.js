@@ -1,4 +1,8 @@
-const Home = Vue.component('home', {
+import Counter from './Counter.js';
+
+const Home = {
+  name: 'home',
+  components: {Counter},
   data() {
     return {
       hello: 'Hello Home!',
@@ -13,6 +17,6 @@ const Home = Vue.component('home', {
         </v-card-text>
       </v-card>
     </div>`
-});
+};
 
 export default Home;
