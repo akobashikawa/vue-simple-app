@@ -1,4 +1,4 @@
-const Main = Vue.component('main', {
+const App = Vue.component('app', {
   data() {
     return {
       hello: 'Hello Vue!',
@@ -69,4 +69,4 @@ const Main = Vue.component('main', {
   </div>`
 });
 
-export default Main;
+export default App;
