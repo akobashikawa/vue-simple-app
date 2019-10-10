@@ -3,6 +3,17 @@ const Counter = {
   computed: {
     ...Vuex.mapState(['counter'])
   },
+  watch: {
+    counter() {
+      if (this.counter == 0) {
+        this.$toast('Zero', {
+          icon: 'info',
+          showClose: true,
+          queueable: true
+        });
+      }
+    }
+  },
   methods: {
     incCounter() {
       this.$store.commit('incCounter', 1);

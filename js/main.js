@@ -3,6 +3,8 @@ import store from './store.js';
 
 import App from './App.js';
 
+// Vue.use(VuetifyToast);
+
 var app = new Vue({
   router,
   store,
