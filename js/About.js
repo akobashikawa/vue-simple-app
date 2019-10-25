@@ -20,7 +20,7 @@ const About = {
         </v-card-text>
       </v-card>
 
-      <v-dialog persistent v-model="showCounter" width="500">
+      <v-dialog v-model="showCounter" width="500">
         <v-card>
           <counter></counter>
           <v-card-actions>
