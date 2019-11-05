@@ -6,4 +6,4 @@ Usando HTML5, Vue, Router, Vuex, Vuetify, pero sin webpack.
 
 Una base simple para empezar.
 
-[Demo](https://codepen.io/akobashikawa/pen/NWKVazJ){:target:"_blank"}
+[Demo](https://codepen.io/akobashikawa/pen/NWKVazJ){:target="_blank" rel="noopener"}
