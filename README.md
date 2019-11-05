@@ -12,3 +12,13 @@ Explora los branches.
 - [+ Modules](https://github.com/akobashikawa/vue-simple-app/tree/html5+vue+router+vuex+vuetify+module)
 - [+ Render](https://github.com/akobashikawa/vue-simple-app/tree/modules-render)
 - [+ Carga dinámica](https://github.com/akobashikawa/vue-simple-app/tree/modules-dynload)
+
+Además, en el master:
+
+- Toast
+- Dialog
+
+Blogs
+
+- [Puroguramu](https://akcdev.blogspot.com/2019/09/vue-simpleapp.html)
+- [Medium](https://medium.com/@rulokoba/vue-simple-app-243e3bdea3c3)
