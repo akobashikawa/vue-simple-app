@@ -22,3 +22,7 @@ Blogs
 
 - [Puroguramu](https://akcdev.blogspot.com/2019/09/vue-simpleapp.html)
 - [Medium](https://medium.com/@rulokoba/vue-simple-app-243e3bdea3c3)
+
+Demo
+
+- [En Glitch](https://vue-simple-app.glitch.me/)
