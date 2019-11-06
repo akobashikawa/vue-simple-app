@@ -25,4 +25,5 @@ Blogs
 
 Demo
 
-- [En Glitch](https://vue-simple-app.glitch.me/)
+- [Vue Simple App en Glitch](https://glitch.com/~vue-simple-app)
+- [Demo en Glitch](https://vue-simple-app.glitch.me/)
