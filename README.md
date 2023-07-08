@@ -1,4 +1,4 @@
-# Vue Simple App
+# Vue Simple App (Vue2)
 
 Usando HTML5, Vue, Router, Vuex, Vuetify, pero sin webpack.
 
